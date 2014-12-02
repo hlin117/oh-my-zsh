@@ -2,6 +2,10 @@ execute pathogen#infect()
 call pathogen#helptags()
 syntax on
 filetype plugin indent on
+"au FileType python set1 shiftwidth=4 tabstop=4 noexpandtab
+au FileType latex indent off
+au FileType plaintex indent off
+"let g:tex_flavor='latex'
 
 let g:airline_theme = 'flattown'
 colorscheme flattown			" Changes the color scheme
@@ -22,8 +26,6 @@ set hlsearch
 set wildmode=longest,list		" Completion for command line settings 
 
 " Tab settings
-filetype plugin indent on
-"au FileType python set1 shiftwidth=4 tabstop=4 noexpandtab
 set autoindent					" Auto indents			
 set smarttab					" Smart tabs (duh)
 set noexpandtab             	" Use tabs instead of spaces
