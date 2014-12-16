@@ -74,4 +74,4 @@ function dict() {
 	sdcv $1 | less
 }
 
-set -o vi
+#set -o vi
