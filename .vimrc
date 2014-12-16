@@ -1,3 +1,4 @@
+" This is a comment
 execute pathogen#infect()
 call pathogen#helptags()
 syntax on
