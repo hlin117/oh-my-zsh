@@ -1,0 +1,13 @@
+# Resources: http://vim.wikia.com/wiki/Use_vi_shortcuts_in_terminal
+# http://unix.stackexchange.com/questions/85390/what-is-meant-by-a-shell-is-in-vi-mode-or-emacs-mode
+#
+#"\e[1;2D": backward-word
+#"\e[1;2C": forward-word
+set editing-mode vi
+set keymap vi-command
+
+###############################################################
+set keymap vi-insert
+
+# Two escapes clear command line.
+#"\C-l": kill-region
