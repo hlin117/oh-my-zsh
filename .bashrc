@@ -73,3 +73,5 @@ alias define=dict
 function dict() {
 	sdcv $1 | less
 }
+
+set -o vi
