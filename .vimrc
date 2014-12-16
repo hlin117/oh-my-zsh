@@ -60,12 +60,10 @@ map <C-t> :NERDTreeToggle<CR>
 set laststatus=2
 
 " Switching tabs like firefox
+" Only works in normal mode
+nnoremap <C-x> :q<CR>
 nnoremap <S-h> :tabprevious<CR>
 nnoremap <S-l>   :tabnext<CR>
-"nnoremap <C-t>     :tabnew<CR>
-"inoremap <C-S-tab> <Esc>:tabprevious<CR>i
-"inoremap <C-tab>   <Esc>:tabnext<CR>i
-"inoremap <C-t>     <Esc>:tabnew<CR>
 
 " https://github.com/tmhedberg/SimpylFold
 set foldmethod=indent
