@@ -21,11 +21,23 @@ shopt -s extglob # Allows you to exclude a file when moving using "mv"
 #	#fi
 #
 #	export GIT_PS1_SHOWDIRTYSTATE=1
-#	export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\W\[\033[m\]\$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] " 
+	export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\W\[\033[m\]\$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] " 
 #
 # Only for the mac
 #else
-	export PS1="[\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\W\[\033[m\]]\$ " 
+
+# Currently doesnt work. But if it did work, then it would change the prompt depending
+# on whether the mode is insert or not
+function something() {
+	TEST=`bind -v | awk '/keymap/ {print $NF}'`
+	if [ "$TEST" = 'vi-insert' ]; then
+	   echo -ne "\033]12;Green\007"
+	else
+	   echo -ne "\033]12;Red\007"
+	fi
+}
+
+	export PS1="[\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\W\[\033[m\]]\$ \$(something)" 
 	export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 
 	viewer() {
@@ -74,4 +86,4 @@ function dict() {
 	sdcv $1 | less
 }
 
-#set -o vi
+alias course_server='ssh halin2@sftp.courses.engr.illinois.edu'
