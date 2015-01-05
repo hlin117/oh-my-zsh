@@ -88,3 +88,5 @@ function dict() {
 }
 
 alias course_server='ssh halin2@sftp.courses.engr.illinois.edu'
+
+. $HOME/.shellrc.load
