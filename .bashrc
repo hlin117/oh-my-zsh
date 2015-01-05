@@ -2,7 +2,8 @@
 ############### SHARED COMMANDS ###############
 ###############################################
 
-source /opt/local/etc/bash_completion.d/git-completion.bash
+source .acd_func.sh
+# source /opt/local/etc/bash_completion.d/git-completion.bash
 alias linuxlabs='ssh -t halin2@remlnx.ews.illinois.edu'
 alias altocumulus='ssh -t halin2@altocumulus.cloud.cs.illinois.edu'
 shopt -s extglob # Allows you to exclude a file when moving using "mv". Use the !(FILE) to exclude
