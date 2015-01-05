@@ -2,7 +2,7 @@
 ############### SHARED COMMANDS ###############
 ###############################################
 
-source .acd_func.sh
+source ~/.acd_func.sh
 # source /opt/local/etc/bash_completion.d/git-completion.bash
 alias linuxlabs='ssh -t halin2@remlnx.ews.illinois.edu'
 alias altocumulus='ssh -t halin2@altocumulus.cloud.cs.illinois.edu'
