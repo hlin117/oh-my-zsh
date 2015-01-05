@@ -3,10 +3,8 @@ execute pathogen#infect()
 call pathogen#helptags()
 syntax on
 filetype plugin indent on
-"au FileType python set1 shiftwidth=4 tabstop=4 noexpandtab
 au FileType latex indent off
 au FileType plaintex indent off
-"let g:tex_flavor='latex'
 
 " Change the cursor shape on a mac running iterm2
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
@@ -109,3 +107,19 @@ augroup END
 
 set viewoptions=cursor,folds,slash,unix
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:startify_session_autoload = 1
+let g:startify_session_persistence = 1
+"let g:startify_list_order = ['sessions', 'dir', 'files', 'bookmarks']
+let g:startify_bookmarks = ['~/.vimrc', '~/.bashrc']
+let g:startify_custom_header =
+  \ map(split(system('fortune | cowsay'), '\n'), '"   ". v:val') + ['','']
+let g:startify_list_order = [
+		\ ['   These are my sessions:'],
+		\ 'sessions',
+		\ ['   These are my bookmarks:'],
+		\ 'bookmarks',
+		\ ]
+"		\ ['   My most recently', '   used files'],
+"		\ 'files',
+"		\ ['   My most recently used files in the current directory:'],
+"		\ 'dir',

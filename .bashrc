@@ -5,7 +5,7 @@
 source /opt/local/etc/bash_completion.d/git-completion.bash
 alias linuxlabs='ssh -t halin2@remlnx.ews.illinois.edu'
 alias altocumulus='ssh -t halin2@altocumulus.cloud.cs.illinois.edu'
-shopt -s extglob # Allows you to exclude a file when moving using "mv"
+shopt -s extglob # Allows you to exclude a file when moving using "mv". Use the !(FILE) to exclude
 
 ################################################
 ############### END SHARED COMMANDS ###############
@@ -37,18 +37,18 @@ function something() {
 	fi
 }
 
-	export PS1="[\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\W\[\033[m\]]\$ \$(something)" 
+	export PS1="[\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\W\[\033[m\]]\$ " 
 	export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 
 	viewer() {
-		open -a preview $1 
+		open -a preview "$1"
 	}
 	alias view=viewer
 
 	alias ll='ls -lG'
 	
 	latex() {
-		pdflatex -interaction=batchmode $1
+		pdflatex -interaction=batchmode "$1"
 	}
 	alias qpdflatex=latex
 
