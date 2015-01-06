@@ -1,0 +1,9 @@
+[user]
+	name = hlin117
+	email = hlin117@gmail.com
+[core]
+	excludesfile = /Users/hlin117/.gitignore_global
+[push]
+	default = simple
+[alias]
+	root = rev-parse --show-toplevel
