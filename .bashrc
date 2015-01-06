@@ -7,7 +7,7 @@ source ~/.acd_func.sh
 alias linuxlabs='ssh -t halin2@remlnx.ews.illinois.edu'
 alias altocumulus='ssh -t halin2@altocumulus.cloud.cs.illinois.edu'
 shopt -s extglob # Allows you to exclude a file when moving using "mv". Use the !(FILE) to exclude
-
+alias jp='jump'
 ################################################
 ############### END SHARED COMMANDS ###############
 ###############################################

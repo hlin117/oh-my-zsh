@@ -3,6 +3,7 @@
 #
 "\e[1;2D": backward-word
 "\e[1;2C": forward-word
+set expand-tilde off
 #set editing-mode vi
 #set keymap vi-command
 #set show-mode-in-prompt on
