@@ -75,7 +75,6 @@ fi
 # Imported from my .bashrc
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
-source ~/.acd_func.sh
 
 # Extra stuff
 source $HOME/.zsh_aliases
