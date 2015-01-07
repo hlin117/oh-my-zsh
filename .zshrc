@@ -87,4 +87,4 @@ source ~/.acd_func.sh
 source $HOME/.zsh_aliases
 source $HOME/.ssh_aliases
 
-
+. $HOME/.shellrc.load
