@@ -55,7 +55,7 @@ export PATH="/Users/hlin117/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/o
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -80,5 +80,6 @@ source ~/.acd_func.sh
 # Extra stuff
 source $HOME/.zsh_aliases
 source $HOME/.ssh_aliases
+source `jump-bin --zsh-integration`
 
 . $HOME/.shellrc.load
