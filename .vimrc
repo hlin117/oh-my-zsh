@@ -61,6 +61,7 @@ set backspace=indent,eol,start
 set mouse=a
 map <C-t> :NERDTreeToggle<CR>
 set laststatus=2
+let g:NERDTreeShowLineNumbers = 1
 
 " Switching tabs like firefox
 " Only works in normal mode
@@ -113,7 +114,6 @@ set viewoptions=cursor,folds,slash,unix
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:startify_session_autoload = 1
 let g:startify_session_persistence = 1
-"let g:startify_list_order = ['sessions', 'dir', 'files', 'bookmarks']
 let g:startify_bookmarks = ['~/.vimrc', '~/.bashrc']
 let g:startify_custom_header =
   \ map(split(system('fortune | cowsay'), '\n'), '"   ". v:val') + ['','']
