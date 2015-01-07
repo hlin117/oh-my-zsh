@@ -13,17 +13,11 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="hlin"
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
@@ -82,14 +76,6 @@ fi
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 source ~/.acd_func.sh
-
-# Please see here for a key: http://www.nparikh.org/unix/prompt.php
-# [\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\W\[\033[m\]]$
-#export PS1="[0;36%n@%m:%c]%# "
-#PROMPT='%{$reset_color%}%n %{$fg[green]%}{%{$reset_color%}%~%{$fg[green]%}}%{$reset_color%}$(git_prompt_info) greetings, earthling %{$fg[green]%}[%{$reset_color%}%{$TotalSize%}%{$suffix%}%{$fg[green]%}]%{$fg[red]%}$%{$reset_color%} ☞ '
-#PROMPT='%2~ $(vcs_status)»%b '
-#PROMPT=$'%{$fg[red]%}┌[%{$fg_bold[white]%}%n%{$reset_color%}%{$fg[red]%}@%{$fg_bold[white]%}%m%{$reset_color%}%{$fg[red]%}] [%{$fg_bold[white]%}/dev/%y%{$reset_color%}%{$fg[red]%}] %{$(git_prompt_info)%}%(?,,%{$fg[red]%}[%{$fg_bold[white]%}%?%{$reset_color%}%{$fg[red]%}])
-#%{$fg[red]%}└[%{$fg_bold[white]%}%~%{$reset_color%}%{$fg[red]%}]>%{$reset_color%} '
 
 # Extra stuff
 source $HOME/.zsh_aliases
