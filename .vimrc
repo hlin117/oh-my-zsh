@@ -35,7 +35,7 @@ set wildmode=longest,list		" Completion for command line settings
 " Tab settings
 set autoindent					" Auto indents			
 set smarttab					" Smart tabs (duh)
-set noexpandtab             	" Use tabs instead of spaces
+set expandtab             		" Use spaces instead of tabs
 set shiftwidth=4            	" Makes tab width 4 spaces
 set tabstop=4               	" Stops the tab every 4 spaces
 
@@ -65,9 +65,10 @@ let g:NERDTreeShowLineNumbers = 1
 
 " Switching tabs like firefox
 " Only works in normal mode
-nnoremap <C-x> :q<CR>
 nnoremap <S-h> :tabprevious<CR>
 nnoremap <S-l>   :tabnext<CR>
+
+
 
 " https://github.com/tmhedberg/SimpylFold
 set foldmethod=indent
@@ -112,6 +113,7 @@ augroup END
 
 set viewoptions=cursor,folds,slash,unix
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:startify_session_dir = '.'
 let g:startify_session_autoload = 1
 let g:startify_session_persistence = 1
 let g:startify_bookmarks = ['~/.vimrc', '~/.bashrc']
@@ -123,6 +125,7 @@ let g:startify_list_order = [
 		\ ['   Saved bookmarks:'],
 		\ 'bookmarks',
 		\ ]
+let g:startify_session_default_name = 'Session.vim'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " A script to rename files
