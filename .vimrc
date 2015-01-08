@@ -118,14 +118,15 @@ let g:startify_bookmarks = ['~/.vimrc', '~/.bashrc']
 let g:startify_custom_header =
   \ map(split(system('fortune | cowsay'), '\n'), '"   ". v:val') + ['','']
 let g:startify_list_order = [
-		\ ['   These are my sessions:'],
+		\ ['   Saved sessions:'],
 		\ 'sessions',
-		\ ['   These are my bookmarks:'],
+		\ ['   Saved bookmarks:'],
 		\ 'bookmarks',
 		\ ]
-"		\ ['   My most recently', '   used files'],
-"		\ 'files',
-"		\ ['   My most recently used files in the current directory:'],
-"		\ 'dir',
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-so ~/.vim/scripts/Rename.vim
+
+" A script to rename files
+source ~/.vim/scripts/Rename.vim
+
+" The ctrl p plugin
+set runtimepath^=~/.vim/bundle/ctrlp.vim
