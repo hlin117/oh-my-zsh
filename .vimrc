@@ -127,3 +127,5 @@ let g:startify_list_order = [
 "		\ 'files',
 "		\ ['   My most recently used files in the current directory:'],
 "		\ 'dir',
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+so ~/.vim/scripts/Rename.vim

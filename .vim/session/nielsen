@@ -3,32 +3,46 @@ if &cp | set nocp | endif
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/.dotfiles/.vim/colors
+cd ~/neural_net/nielsen/src
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +1 ir_blue.vim
-badd +13 base16-ocean-dark.vim
-badd +1 solarized.vim
-badd +11 base16_ocean_dark.vim
-badd +1 README
+badd +7 main.py
+badd +16 network.py
+badd +179 ~/neural_net/demo/lemondetection/neuralnet.py
+badd +9 ~/neural_net/demo/lemondetection/main.py
 argglobal
 silent! argdel *
-argadd ir_blue.vim
-set stal=2
-edit base16_ocean_dark.vim
+argadd main.py
+edit network.py
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
-1wincmd h
+wincmd _ | wincmd |
+vsplit
+2wincmd h
+wincmd w
 wincmd w
 set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
-exe 'vert 1resize ' . ((&columns * 90 + 90) / 180)
-exe 'vert 2resize ' . ((&columns * 89 + 90) / 180)
+exe 'vert 1resize ' . ((&columns * 31 + 90) / 180)
+exe 'vert 2resize ' . ((&columns * 74 + 90) / 180)
+exe 'vert 3resize ' . ((&columns * 73 + 90) / 180)
+argglobal
+enew
+file NERD_tree_1
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=20
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+wincmd w
 argglobal
 setlocal fdm=indent
 setlocal fde=0
@@ -38,15 +52,17 @@ setlocal fdl=20
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 19 - ((18 * winheight(0) + 19) / 39)
+21
+normal! zo
+let s:l = 43 - ((9 * winheight(0) + 20) / 40)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-19
+43
 normal! 0
 wincmd w
 argglobal
-edit ir_blue.vim
+edit main.py
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -55,67 +71,20 @@ setlocal fdl=20
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 10 - ((9 * winheight(0) + 19) / 39)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-10
-normal! 02|
-wincmd w
-exe 'vert 1resize ' . ((&columns * 90 + 90) / 180)
-exe 'vert 2resize ' . ((&columns * 89 + 90) / 180)
-tabedit README
-set splitbelow splitright
-set nosplitbelow
-set nosplitright
-wincmd t
-set winheight=1 winwidth=1
-argglobal
-setlocal fdm=indent
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=20
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 19) / 39)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-1
-normal! 066|
-tabedit solarized.vim
-set splitbelow splitright
-set nosplitbelow
-set nosplitright
-wincmd t
-set winheight=1 winwidth=1
-argglobal
-setlocal fdm=marker
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-9
-normal! zo
-133
-normal! zo
-160
-normal! zo
-226
-normal! zo
-let s:l = 7 - ((6 * winheight(0) + 19) / 39)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
 7
+normal! zo
+let s:l = 5 - ((4 * winheight(0) + 20) / 40)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+5
 normal! 0
+wincmd w
+3wincmd w
+exe 'vert 1resize ' . ((&columns * 31 + 90) / 180)
+exe 'vert 2resize ' . ((&columns * 74 + 90) / 180)
+exe 'vert 3resize ' . ((&columns * 73 + 90) / 180)
 tabnext 1
-set stal=1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
 endif

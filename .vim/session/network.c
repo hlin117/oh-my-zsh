@@ -79,11 +79,11 @@ normal! zo
 normal! zo
 225
 normal! zo
-let s:l = 10 - ((9 * winheight(0) + 19) / 39)
+let s:l = 19 - ((18 * winheight(0) + 19) / 39)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-10
+19
 normal! 0
 wincmd w
 2wincmd w
