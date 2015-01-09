@@ -20,11 +20,28 @@ ZSH_THEME_GIT_PROMPT_DIRTY=""
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[green]%}✚ "
-ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[blue]%}✹ "
 ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%}✖ "
+ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[blue]%}✹ "
 ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[magenta]%}➜  "
 ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[yellow]%}═ "
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%}✭ "
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%}%{ ✔%G%}"
+ZSH_THEME_GIT_PROMPT_STAGED="%{$fg[red]%}%{●%G%}"
+ZSH_THEME_GIT_PROMPT_SEPARATOR="|"
+
+# The full list. 
+# Source: https://github.com/olivierverdier/zsh-git-prompt/blob/master/zshrc.sh
+# ZSH_THEME_GIT_PROMPT_PREFIX="("
+# ZSH_THEME_GIT_PROMPT_SUFFIX=")"
+# ZSH_THEME_GIT_PROMPT_SEPARATOR="|"
+# ZSH_THEME_GIT_PROMPT_BRANCH="%{$fg_bold[magenta]%}"
+# ZSH_THEME_GIT_PROMPT_STAGED="%{$fg[red]%}%{●%G%}"
+# ZSH_THEME_GIT_PROMPT_CONFLICTS="%{$fg[red]%}%{✖%G%}"
+# ZSH_THEME_GIT_PROMPT_CHANGED="%{$fg[blue]%}%{✚%G%}"
+# ZSH_THEME_GIT_PROMPT_BEHIND="%{↓%G%}"
+# ZSH_THEME_GIT_PROMPT_AHEAD="%{↑%G%}"
+# ZSH_THEME_GIT_PROMPT_UNTRACKED="%{…%G%}"
+# ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%}%{✔%G%}"
 
 # What is actually shown as output
 PROMPT="[${user}@${host}:${pwd}]$ "
