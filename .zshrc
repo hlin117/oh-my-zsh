@@ -81,4 +81,7 @@ source $HOME/.zsh_aliases
 source $HOME/.ssh_aliases
 source `jump-bin --zsh-integration`
 
+export GIT_EDITOR=vim
+
+
 . $HOME/.shellrc.load

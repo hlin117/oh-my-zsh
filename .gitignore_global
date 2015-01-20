@@ -3,3 +3,4 @@
 *.pyc
 *.o
 .gitignore
+Session.vim

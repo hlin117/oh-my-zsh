@@ -31,8 +31,8 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%}¤ "
 #ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%}✭ "
 
 # Regarding commits
-ZSH_THEME_GIT_PROMPT_BEHIND="%{↓%G%}"
-ZSH_THEME_GIT_PROMPT_AHEAD="%{↑ %G%}"
+#ZSH_THEME_GIT_PROMPT_BEHIND="%{↓%G%}"
+#ZSH_THEME_GIT_PROMPT_AHEAD="%{↑%G%}"
 
 # Regarding branches
 ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[yellow]%}═ "

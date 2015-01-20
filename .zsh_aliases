@@ -20,3 +20,4 @@ latex() {
 alias qpdflatex=latex
 
 alias jp='jump'
+alias vi='vim'
