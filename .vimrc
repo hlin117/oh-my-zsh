@@ -1,7 +1,6 @@
 " This is a comment
 execute pathogen#infect()
 call pathogen#helptags()
-syntax on
 filetype plugin indent on
 au FileType latex indent off
 au FileType plaintex indent off
@@ -40,15 +39,26 @@ set tabstop=4               	" Stops the tab every 4 spaces
 " File settings
 set nobackup				
 set noswapfile
+set nowritebackup
 
 set backspace=indent,eol,start
 set mouse=a
-"set laststatus=2
+set laststatus=2
 
+nnoremap <S-h> :tabprevious<CR>    " Remaps shift+h to going to the previous tab
+nnoremap <S-l> :tabnext<CR>      " Remaps shift+l to going to the next tab
 
-" Preserves the last editing position
-" Source: http://stackoverflow.com/questions/7894330/preserve-last-editing-position-in-vim
-source $VIMRUNTIME/vimrc_example.vim
+" When editing a file, always jump to the last known cursor position.
+" Don't do it when the position is invalid or when inside an event handler
+" (happens when dropping a file on gvim).
+" Also don't do it when the mark is in the first line, that is the default
+" position when opening a file.
+autocmd BufReadPost *
+  \ if line("'\"") > 1 && line("'\"") <= line("$") |
+  \   exe "normal! g`\"" |
+  \ endif
+
+augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:airline_theme = 'flattown'
@@ -77,8 +87,5 @@ let g:startify_list_order = [
 let g:startify_session_default_name = 'Session.vim'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" A script to rename files
-source ~/.vim/scripts/Rename.vim
-
-" The ctrl p plugin
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+source ~/.vim/scripts/Rename.vim " A script to rename files
+set runtimepath^=~/.vim/bundle/ctrlp.vim " The ctrl p plugin
