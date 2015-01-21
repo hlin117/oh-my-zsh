@@ -72,16 +72,11 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Imported from my .bashrc
-export CLICOLOR=1
-export LSCOLORS=ExFxBxDxCxegedabagacad
 
 # Extra stuff
 source $HOME/.zsh_aliases
 source $HOME/.ssh_aliases
 source `jump-bin --zsh-integration`
-
 export GIT_EDITOR=vim
-
 
 . $HOME/.shellrc.load

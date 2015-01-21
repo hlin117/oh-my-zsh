@@ -21,3 +21,7 @@ alias qpdflatex=latex
 
 alias jp='jump'
 alias vi='vim'
+
+# Imported from my .bashrc
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
