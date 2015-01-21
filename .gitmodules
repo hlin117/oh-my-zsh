@@ -22,3 +22,9 @@
 [submodule ".vim/bundle/ctrlp"]
     path = .vim/bundle/ctrlp.vim
     url = https://github.com/kien/ctrlp.vim.git
+[submodule ".vim/bundle/ultisnips"]
+	path = .vim/bundle/ultisnips
+	url = git://github.com/SirVer/ultisnips.git
+[submodule ".vim/vim-snippets"]
+	path = .vim/vim-snippets
+	url = https://github.com/honza/vim-snippets.git
