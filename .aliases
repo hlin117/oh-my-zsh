@@ -33,6 +33,6 @@ alias vi='vim'
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
-if [ "$USER" == "halin2" ] ; then
+if [ "$USER" = "halin2" ] ; then
     alias ls='ls --color=auto'
 fi
