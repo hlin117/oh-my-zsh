@@ -2,8 +2,8 @@
 execute pathogen#infect()
 call pathogen#helptags()
 filetype plugin indent on
-au FileType latex indent off
-au FileType plaintex indent off
+"au FileType latex indent off
+"au FileType plaintex indent off
 
 nmap <F4> :make clean <CR>
 nmap <F5> :make <bar> copen <CR>
