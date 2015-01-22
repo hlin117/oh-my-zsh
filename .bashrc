@@ -89,4 +89,9 @@ function dict() {
 
 alias course_server='ssh halin2@sftp.courses.engr.illinois.edu'
 
+if [ -d /class/cs225 ] ; then
+	export PATH=/class/cs225/llvm/bin:$PATH
+fi
+
+
 . $HOME/.shellrc.load
