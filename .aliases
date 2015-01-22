@@ -32,3 +32,7 @@ alias vi='vim'
 # Imported from my .bashrc
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
+
+if [ "$USER" == "halin2" ] ; then
+    alias ls='ls --color=auto'
+fi
