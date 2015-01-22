@@ -1,14 +1,3 @@
-# The dropbox college directory
-alias college='cd ~/Dropbox/college'
-alias classes='cd ~/Dropbox/college/classes'
-
-# For shell dictionary
-alias define=dict
-
-function dict() {
-	sdcv $1 | less
-}
-
 function swap() {
 	local TMPFILE=tmp.$$
 	mv "$1" $TMPFILE
@@ -16,23 +5,50 @@ function swap() {
 	mv $TMPFILE "$2"
 }
 
-viewer() {
-	open -a preview "$1"
-}
-alias view=viewer
-
-latex() {
-	pdflatex -interaction=batchmode "$1"
-}
-alias qpdflatex=latex
-
-alias jp='jump'
 alias vi='vim'
 
 # Imported from my .bashrc
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
+################################################################################
+# EVERYTHING THAT BELONGS ON THE MAC
+################################################################################
+if [ "$USER" = "hlin117" ] ; then
+
+    alias jp='jump'
+
+    viewer() {
+        open -a preview "$1"
+    }
+    alias view=viewer
+
+    _view() {
+        local user_input
+        read -cA user_input
+        local cur prev
+        reply=( `ls ${cur}*.pdf` )
+        return 0
+    }
+
+    compctl -K _view -S '' viewer
+
+    latex() {
+        pdflatex -interaction=batchmode "$1"
+    }
+    alias qpdflatex=latex
+
+    # For shell dictionary
+    alias define=dict
+
+    function dict() {
+        sdcv $1 | less
+    }
+fi
+
+################################################################################
+# EVERYTHING THAT BELONGS TO THE LINUX LABS
+################################################################################
 if [ "$USER" = "halin2" ] ; then
     alias ls='ls --color=auto'
 fi
