@@ -2,8 +2,6 @@
 execute pathogen#infect()
 call pathogen#helptags()
 filetype plugin indent on
-"au FileType latex indent off
-"au FileType plaintex indent off
 
 nmap <F4> :make clean <CR>
 nmap <F5> :make <bar> copen <CR>
@@ -96,7 +94,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 source ~/.vim/scripts/Rename.vim " A script to rename files
 set runtimepath^=~/.vim/bundle/ctrlp.vim " The ctrl p plugin
