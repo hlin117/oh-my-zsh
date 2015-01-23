@@ -70,8 +70,8 @@ fi
 
 
 # Extra stuff
-source $HOME/.aliases
-source $HOME/.ssh_aliases
+source $HOME/.aliases.sh
+source $HOME/.ssh_aliases.sh
 source `jump-bin --zsh-integration`
 export GIT_EDITOR=vim
 

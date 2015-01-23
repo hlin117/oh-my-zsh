@@ -4,7 +4,7 @@ if [ -d /class/cs225 ] ; then
 fi
 
 source $HOME/.acd_func.sh
-source $HOME/.aliases
-source $HOME/.ssh_aliases
+source $HOME/.aliases.sh
+source $HOME/.ssh_aliases.sh
 
 . $HOME/.shellrc.load
