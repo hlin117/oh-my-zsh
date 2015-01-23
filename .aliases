@@ -18,25 +18,33 @@ if [ "$USER" = "hlin117" ] ; then
 
     alias jp='jump'
 
+    # BEGIN VIEW DEFINITION
     viewer() {
         open -a preview "$1"
     }
     alias view=viewer
 
     _view() {
-        local user_input
-        read -cA user_input
-        local cur prev
+        local cur
         reply=( `ls ${cur}*.pdf` )
         return 0
     }
-
     compctl -K _view -S '' viewer
+    # END VIEW DEFINITION
 
+    # BEGIN LATEX DEFINITION
     latex() {
         pdflatex -interaction=batchmode "$1"
     }
     alias qpdflatex=latex
+    
+    _latex() {
+        local cur
+        reply=( `ls ${cur}*.tex` )
+        return 0
+    }
+    compctl -K _latex -S '' latex
+    # END VIEW DEFINITION
 
     # For shell dictionary
     alias define=dict
