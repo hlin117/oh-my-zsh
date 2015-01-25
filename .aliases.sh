@@ -1,4 +1,14 @@
 function swap() {
+    if [ ! -f "$1" ] ; then
+        echo "$1 does not exist"
+        return 1
+    fi
+
+    if [ ! -f "$2" ] ; then
+        echo "$2 does not exist"
+        return 1
+    fi
+
 	local TMPFILE=tmp.$$
 	mv "$1" $TMPFILE
 	mv "$2" "$1"
@@ -7,7 +17,6 @@ function swap() {
 
 alias vi='vim'
 
-# Imported from my .bashrc
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
@@ -46,12 +55,14 @@ if [ "$USER" = "hlin117" ] ; then
     compctl -K _latex -S '' latex
     # END VIEW DEFINITION
 
-    # For shell dictionary
+    # BEGIN DICT DEFINITION
     alias define=dict
 
     function dict() {
         sdcv $1 | less
     }
+    # END DICT DEFINITION
+
 fi
 
 ################################################################################

@@ -10,7 +10,6 @@ nmap <F5> :make <bar> copen <CR>
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
-colorscheme flattown			" Changes the color scheme
 set number                  	" Line numbering
 set scrolloff=5					" Five lines of content beneath the cursor
 syntax on					" Turns on automatic highlighting	
@@ -41,7 +40,6 @@ set nowritebackup
 
 set backspace=indent,eol,start
 set mouse=a
-set laststatus=2
 
 nnoremap <S-h> :tabprevious<CR>    " Remaps shift+h to going to the previous tab
 nnoremap <S-l> :tabnext<CR>      " Remaps shift+l to going to the next tab
@@ -59,7 +57,33 @@ autocmd BufReadPost *
 augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:airline_theme = 'flattown'
+" Really sexy UI customizations
+colorscheme flattown  " Changes the color scheme
+set laststatus=2
+
+"let g:airline_theme = 'flattown'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '▶'
+" let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" unicode symbols
+"let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+"let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+"let g:airline_symbols.linenr = '␊'
+"let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+"let g:airline_symbols.paste = 'Þ'
+"let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <C-t> :NERDTreeToggle<CR>
 let g:NERDTreeShowLineNumbers = 1
