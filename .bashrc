@@ -1,4 +1,3 @@
-
 if [ -d /class/cs225 ] ; then
 	export PATH=/class/cs225/llvm/bin:$PATH
 fi
