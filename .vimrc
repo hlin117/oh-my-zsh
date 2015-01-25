@@ -16,12 +16,13 @@ syntax on					" Turns on automatic highlighting
 set nowrap
 set ruler				
 set magic						" Finds regular expressions
+set showmatch
 
 " Allows you to use the "*" register
 set clipboard=unnamed
 
 " Search settings
-set incsearch
+set incsearch                   " Show matches as you type
 set smartcase
 set hlsearch
 set wildmode=longest,list		" Completion for command line settings 
@@ -43,6 +44,7 @@ set mouse=a
 
 nnoremap <S-h> :tabprevious<CR>    " Remaps shift+h to going to the previous tab
 nnoremap <S-l> :tabnext<CR>      " Remaps shift+l to going to the next tab
+nnoremap <S-o> o<ESC>               " Lets you create newlines within normal mode
 
 " When editing a file, always jump to the last known cursor position.
 " Don't do it when the position is invalid or when inside an event handler
