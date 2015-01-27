@@ -16,6 +16,7 @@ function swap() {
 }
 
 alias vi='vim'
+alias tree='tree -C'
 
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
