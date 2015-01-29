@@ -71,4 +71,11 @@ fi
 ################################################################################
 if [ "$USER" = "halin2" ] ; then
     alias ls='ls --color=auto'
+    alias tmux="TERM=screen-256color-bce tmux"
+
+    if [ -d /class/cs225 ] ; then
+        export PATH=/class/cs225/llvm/bin:$PATH
+    else
+        echo "Warning: Clang is not loaded"
+    fi
 fi

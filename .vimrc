@@ -44,7 +44,7 @@ set mouse=a
 
 nnoremap <S-h> :tabprevious<CR>    " Remaps shift+h to going to the previous tab
 nnoremap <S-l> :tabnext<CR>      " Remaps shift+l to going to the next tab
-nnoremap <S-o> o<ESC>               " Lets you create newlines within normal mode
+"nnoremap <S-o> o<ESC>               " Lets you create newlines within normal mode
 map <S-k> <Nop>
 
 " When editing a file, always jump to the last known cursor position.
