@@ -92,11 +92,6 @@ map <C-t> :NERDTreeToggle<CR>
 let g:NERDTreeShowLineNumbers = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" https://github.com/tmhedberg/SimpylFold
-set foldmethod=indent
-set foldlevel=20
-let g:SimpylFold_fold_docstring = 0
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:startify_session_dir = '.'
 let g:startify_session_autoload = 1
 let g:startify_session_persistence = 1
