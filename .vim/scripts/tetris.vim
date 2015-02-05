@@ -218,7 +218,7 @@ fu! s:Init()
  let s:COUNTER=(s:CNT*s:DTIME)/1000
  echon 'Delay:'.s:DELAY.' Counter: '.s:COUNTER
  if !exists('s:name') || s:name==''
-  let s:name=strpart(inputdialog("What's your name?\nIt will be used in the top10 list"),0,30)
+  let s:name=strpart(inputdialog("What's your name?\nIt will be used in the top 10 list "),0,30)
  en
  let s:mode=confirm('Game mode',"Traditional\nRotating")-1
 endf

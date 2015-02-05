@@ -46,6 +46,7 @@ nnoremap <S-h> :tabprevious<CR>    " Remaps shift+h to going to the previous tab
 nnoremap <S-l> :tabnext<CR>      " Remaps shift+l to going to the next tab
 "nnoremap <S-o> o<ESC>               " Lets you create newlines within normal mode
 map <S-k> <Nop>
+nnoremap <F8> :Latexmk<CR>
 
 " When editing a file, always jump to the last known cursor position.
 " Don't do it when the position is invalid or when inside an event handler
@@ -123,4 +124,5 @@ let g:UltiSnipsEditSplit="vertical"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 source ~/.vim/scripts/Rename.vim " A script to rename files
+source ~/.vim/scripts/tetris.vim " A script to play tetris
 set runtimepath^=~/.vim/bundle/ctrlp.vim " The ctrl p plugin
