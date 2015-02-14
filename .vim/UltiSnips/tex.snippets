@@ -8,14 +8,14 @@ snippet notehead "The header I use for most latex documents" b
 \usepackage{multicol,amsthm}
 \usepackage{amsmath}
 \usepackage{enumerate, verbatim, courier}
-\usepackage{wasysym}
+%\usepackage{wasysym}
 \usepackage{float}
 %\usepackage[pdftex]{graphicx}
-\usepackage{boxes}
 \usepackage{sidecap}
-\usepackage{wrapfig}
+%\usepackage{wrapfig}
 \usepackage{hlin}
 \usepackage{jeffe}
+\usepackage{boxes}
 \renewcommand{\labelitemi}{--}
 \renewcommand{\labelitemii}{$\bullet$}
 
@@ -58,8 +58,6 @@ snippet notehead "The header I use for most latex documents" b
 \SetMathAlphabet{\mathtt}{normal}{\encodingdefault}{\ttdefault}{\mddefault}{\updefault}
 \usepackage{microtype}
 \setlength\parindent{0pt}
-\renewcommand{\mag}[1]{\ensuremath{\|#1\|}}
-
 
 \begin{document}
 
@@ -73,10 +71,14 @@ snippet notehead "The header I use for most latex documents" b
 endsnippet
 
 snippet  "To bold"
-\textbf{$1
+\textbf{
 endsnippet
 
 snippet \begin "A new environment" b
 \begin{$1}
 \end{$1}
+endsnippet
+
+snippet it "Italics" 
+\textit{
 endsnippet
