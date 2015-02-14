@@ -14,9 +14,10 @@ set number                  	" Line numbering
 set scrolloff=5					" Five lines of content beneath the cursor
 syntax on					" Turns on automatic highlighting	
 set nowrap
-set ruler				
+set ruler
 set magic						" Finds regular expressions
 set showmatch
+set ff=unix                     " Sets the file format to unix
 
 " Allows you to use the "*" register
 set clipboard=unnamed
@@ -44,7 +45,6 @@ set mouse=a
 
 nnoremap <S-h> :tabprevious<CR>    " Remaps shift+h to going to the previous tab
 nnoremap <S-l> :tabnext<CR>      " Remaps shift+l to going to the next tab
-"nnoremap <S-o> o<ESC>               " Lets you create newlines within normal mode
 map <S-k> <Nop>
 nnoremap <F8> :Latexmk<CR>
 
@@ -116,6 +116,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Configurations for latex-box
+let g:LatexBox_autojump = 1
+let g:LatexBox_latexmk_async=0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 source ~/.vim/scripts/Rename.vim " A script to rename files
