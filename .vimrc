@@ -46,7 +46,7 @@ set mouse=a
 nnoremap <S-h> :tabprevious<CR>    " Remaps shift+h to going to the previous tab
 nnoremap <S-l> :tabnext<CR>      " Remaps shift+l to going to the next tab
 map <S-k> <Nop>
-nnoremap <F8> :Latexmk<CR>
+"nnoremap <F8> :Latexmk<CR>
 
 " When editing a file, always jump to the last known cursor position.
 " Don't do it when the position is invalid or when inside an event handler
