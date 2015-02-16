@@ -1,2 +1,4 @@
 .bash_profile
 *.log
+*.aux
+.gitconfig
