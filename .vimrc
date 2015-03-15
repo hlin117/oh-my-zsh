@@ -12,7 +12,7 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 set number                  	" Line numbering
 set scrolloff=5					" Five lines of content beneath the cursor
-syntax on					" Turns on automatic highlighting	
+syntax on					" Turns on automatic highlighting
 set nowrap
 set ruler
 set magic						" Finds regular expressions
@@ -26,17 +26,19 @@ set clipboard=unnamed
 set incsearch                   " Show matches as you type
 set smartcase
 set hlsearch
-set wildmode=longest,list		" Completion for command line settings 
+set wildmode=longest,list		" Completion for command line settings
+set wildmenu
 
 " Tab settings
-set autoindent					" Auto indents			
+set autoindent					" Auto indents
 set smarttab					" Smart tabs (duh)
 set expandtab             		" Use spaces instead of tabs
 set shiftwidth=4            	" Makes tab width 4 spaces
 set tabstop=4               	" Stops the tab every 4 spaces
+set autoread                    " No refreshing anymore
 
 " File settings
-set nobackup				
+set nobackup
 set noswapfile
 set nowritebackup
 
@@ -46,6 +48,8 @@ set mouse=a
 nnoremap <S-h> :tabprevious<CR>    " Remaps shift+h to going to the previous tab
 nnoremap <S-l> :tabnext<CR>      " Remaps shift+l to going to the next tab
 map <S-k> <Nop>
+map q <Nop>						" Turns off recording mode
+map <C-e> <Nop>
 "nnoremap <F8> :Latexmk<CR>
 
 " When editing a file, always jump to the last known cursor position.
@@ -58,6 +62,9 @@ autocmd BufReadPost *
   \   exe "normal! g`\"" |
   \ endif
 augroup END
+
+" Removes trailing whitespaces when you save
+autocmd BufWritePre * :%s/\s\+$//e
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Really sexy UI customizations

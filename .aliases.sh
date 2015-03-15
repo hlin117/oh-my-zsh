@@ -47,7 +47,7 @@ if [ "$USER" = "hlin117" ] ; then
         pdflatex -interaction=batchmode "$1"
     }
     alias qpdflatex=latex
-    
+
     _latex() {
         local cur
         reply=( `ls ${cur}*.tex` )

@@ -23,7 +23,6 @@ snippet notehead "The header I use for most latex documents" b
 \newcommand{\assignment}{Assignment 5}
 \renewcommand{\date}{DATE HERE}
 \newcommand{\class}{CS WHATEVER, Spring 2015}
-\newcommand*\widefbox[1]{\fbox{\hspace{2em}#1\hspace{2em}}}
 \lstset{language=python,
                 basicstyle=\ttfamily,
                 keywordstyle=\color{blue}\ttfamily,
@@ -74,6 +73,10 @@ snippet  "To bold"
 \textbf{
 endsnippet
 
+snippet def "Definitions"
+\textbf{$1}.
+endsnippet
+
 snippet \begin "A new environment" b
 \begin{$1}
 \end{$1}
@@ -82,3 +85,22 @@ endsnippet
 snippet it "Italics" 
 \textit{
 endsnippet
+
+snippet skip "skipper"
+
+\medskip
+
+
+
+endsnippet
+
+
+snippet line "line"
+
+\bigskip
+\hrule
+\bigskip
+
+
+endsnippet
+
