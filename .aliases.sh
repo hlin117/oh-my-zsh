@@ -28,6 +28,10 @@ if [ "$USER" = "hlin117" ] ; then
 
     alias jp='jump'
 
+    # Using the gnu `ls` command instead of the bsd `ls` command
+    #hidden="--ignore='Applications'"
+    alias ls='gls --color=always --hide="Applications" --hide="Documents" --hide="Music" --hide="Downloads" --hide="Pictures" --hide="Public" --hide="Desktop" --hide="Movies" --hide="*.pyc"'
+
     # BEGIN VIEW DEFINITION
     viewer() {
         open -a preview "$1"
@@ -64,6 +68,9 @@ if [ "$USER" = "hlin117" ] ; then
     }
     # END DICT DEFINITION
 
+    if [ -d "/usr/local/nltk_data" ] ; then
+        export NLTK_DATA="/usr/local/nltk_data":$NLTK_DATA
+    fi
 fi
 
 ################################################################################
@@ -74,7 +81,7 @@ if [ "$USER" = "halin2" ] ; then
     alias tmux="TERM=screen-256color-bce tmux"
 
     if [ -d /class/cs225 ] ; then
-        export PATH=/class/cs225/llvm/bin:$PATH
+        export PATH="/class/cs225/llvm/bin":$PATH
     else
         echo "Warning: Clang is not loaded"
     fi
