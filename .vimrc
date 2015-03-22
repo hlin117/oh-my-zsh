@@ -3,6 +3,7 @@ execute pathogen#infect()
 call pathogen#helptags()
 filetype plugin indent on
 
+" I never use these anyways...
 nmap <F4> :make clean <CR>
 nmap <F5> :make <bar> copen <CR>
 
@@ -23,9 +24,9 @@ set ff=unix                     " Sets the file format to unix
 set clipboard=unnamed
 
 " Search settings
-set incsearch                   " Show matches as you type
+"set incsearch
 set smartcase
-set hlsearch
+set hlsearch                    " Show matches as you type
 set wildmode=longest,list		" Completion for command line settings
 set wildmenu
 
@@ -52,7 +53,6 @@ map q <Nop>						" Turns off recording mode
 map <C-e> <Nop>
 map <C-d> <Nop>
 map <C-e> <Nop>
-"nnoremap <F8> :Latexmk<CR>
 
 " When editing a file, always jump to the last known cursor position.
 " Don't do it when the position is invalid or when inside an event handler
@@ -65,11 +65,8 @@ autocmd BufReadPost *
   \ endif
 augroup END
 
-" Removes trailing whitespaces when you save
-"autocmd BufWritePre * :%s/\s\+$//e
-
 " Using file extension to remove trailing whitespaces when you save
-autocmd BufWritePre *.h,*.c,*.java,*.py :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 function! <SID>StripTrailingWhitespaces()
     let l = line(".")
@@ -110,24 +107,10 @@ let g:airline_symbols.whitespace = 'Ξ'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <C-t> :NERDTreeToggle<CR>
 let g:NERDTreeShowLineNumbers = 1
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:startify_session_dir = '.'
-let g:startify_session_autoload = 1
-let g:startify_session_persistence = 1
-let g:startify_bookmarks = ['~/.vimrc', '~/.bashrc']
-let g:startify_custom_header =
-  \ map(split(system('fortune | cowsay'), '\n'), '"   ". v:val') + ['','']
-let g:startify_list_order = [
-		\ ['   Saved sessions:'],
-		\ 'sessions',
-		\ ['   Saved bookmarks:'],
-		\ 'bookmarks',
-		\ ]
-let g:startify_session_default_name = 'Session.vim'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+" Trigger configuration. Do not use <tab> if you use
+" https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
@@ -142,5 +125,4 @@ let g:LatexBox_latexmk_async=0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 source ~/.vim/scripts/Rename.vim " A script to rename files
-source ~/.vim/scripts/tetris.vim " A script to play tetris
-set runtimepath^=~/.vim/bundle/ctrlp.vim " The ctrl p plugin
+source ~/.vim/scripts/tetris.vim " A script to play tetris, leader te
