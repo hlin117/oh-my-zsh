@@ -30,7 +30,7 @@ if [ "$USER" = "hlin117" ] ; then
 
     # Using the gnu `ls` command instead of the bsd `ls` command
     #hidden="--ignore='Applications'"
-    alias ls='gls --color=always --hide="Applications" --hide="Documents" --hide="Music" --hide="Downloads" --hide="Pictures" --hide="Public" --hide="Desktop" --hide="Movies" --hide="*.pyc"'
+    alias ls='gls --color=always --hide="Applications" --hide="Documents" --hide="Music" --hide="Downloads" --hide="Pictures" --hide="Public" --hide="Desktop" --hide="Movies" --hide="*.pyc" --hide="Library"'
 
     # BEGIN VIEW DEFINITION
     viewer() {
