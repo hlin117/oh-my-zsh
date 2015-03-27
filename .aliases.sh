@@ -82,7 +82,5 @@ if [ "$USER" = "halin2" ] ; then
 
     if [ -d /class/cs225 ] ; then
         export PATH="/class/cs225/llvm/bin":$PATH
-    else
-        echo "Warning: Clang is not loaded"
     fi
 fi
