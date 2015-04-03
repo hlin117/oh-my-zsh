@@ -106,7 +106,6 @@ let g:airline_symbols.whitespace = 'Ξ'
 map <C-t> :NERDTreeToggle<CR>
 let g:NERDTreeShowLineNumbers = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " Trigger configuration. Do not use <tab> if you use
 " https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -120,6 +119,14 @@ let g:UltiSnipsEditSplit="vertical"
 " Configurations for latex-box
 let g:LatexBox_autojump = 1
 let g:LatexBox_latexmk_async=0
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Configurations for git-gutter
+let g:gitgutter_realtime = 0
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Configurations for vim-signify
+let g:signify_csv_list = [ 'svn' ]
+let g:signify_sign_change = '~'
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 source ~/.vim/scripts/Rename.vim " A script to rename files
