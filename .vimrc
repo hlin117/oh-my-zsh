@@ -126,8 +126,8 @@ let g:gitgutter_realtime = 0
 " Configurations for vim-signify
 let g:signify_csv_list = [ 'svn' ]
 let g:signify_sign_change = '~'
-nmap ]c <plug>(signify-next-hunk)
-nmap [c <plug>(signify-prev-hunk)
+"nmap ]c <plug>(signify-next-hunk)
+"nmap [c <plug>(signify-prev-hunk)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 source ~/.vim/scripts/Rename.vim " A script to rename files

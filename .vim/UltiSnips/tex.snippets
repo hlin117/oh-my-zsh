@@ -1,17 +1,19 @@
 snippet notehead "The header I use for most latex documents" b
 \documentclass[10pt, leqno]{exam}
 \usepackage{xspace}
-\usepackage{listings}
-\usepackage{empheq}
-\usepackage{color}
-\usepackage{multirow}
-\usepackage{multicol,amsthm}
+%\usepackage{listings}
+%\usepackage{empheq}
+%\usepackage{color}
+%\usepackage{multirow}
+%\usepackage{multicol,amsthm}
 \usepackage{amsmath}
-\usepackage{enumerate, verbatim, courier}
+\usepackage{enumerate}
+\usepackage{verbatim}
 %\usepackage{wasysym}
 \usepackage{float}
 %\usepackage[pdftex]{graphicx}
-\usepackage{sidecap}
+\usepackage{mathtools}
+%\usepackage{sidecap}
 %\usepackage{wrapfig}
 \usepackage{hlin}
 \usepackage{jeffe}
@@ -23,13 +25,6 @@ snippet notehead "The header I use for most latex documents" b
 \newcommand{\assignment}{Assignment 5}
 \renewcommand{\date}{DATE HERE}
 \newcommand{\class}{CS WHATEVER, Spring 2015}
-\lstset{language=python,
-                basicstyle=\ttfamily,
-                keywordstyle=\color{blue}\ttfamily,
-                stringstyle=\color{red}\ttfamily,
-                commentstyle=\color{green}\ttfamily,
-                morecomment=[l][\color{magenta}]{\#}
-}
 
 %\setlength{\parskip}{\baselineskip}%
 
@@ -102,4 +97,3 @@ snippet line "line"
 
 
 endsnippet
-
