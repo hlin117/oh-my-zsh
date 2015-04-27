@@ -52,6 +52,9 @@ map <S-k> <Nop>
 nnoremap q <Nop>						" Turns off recording mode
 map <C-e> <Nop>
 
+set colorcolumn=81
+
+
 " When editing a file, always jump to the last known cursor position.
 " Don't do it when the position is invalid or when inside an event handler
 " (happens when dropping a file on gvim).
@@ -73,6 +76,7 @@ function! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfun
 
+set autoread
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Really sexy UI customizations
