@@ -7,7 +7,7 @@ export ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 
 # Some good themes:
-# Soliah, alanpeabody, cloud, crunch, dallas, dieter, eastwood, 
+# Soliah, alanpeabody, cloud, crunch, dallas, dieter, eastwood,
 # gallois, godzilla, gnzh, kphoen, mrtazz, muse, pygmalion, steeef,
 # terminalparty, blinks
 

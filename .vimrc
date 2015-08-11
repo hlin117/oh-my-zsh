@@ -3,9 +3,9 @@ execute pathogen#infect()
 call pathogen#helptags()
 filetype plugin indent on
 
-" I never use these anyways...
-nmap <F4> :make clean <CR>
-nmap <F5> :make <bar> copen <CR>
+"" I never use these anyways...
+"nmap <F4> :make clean <CR>
+"nmap <F5> :make <bar> copen <CR>
 
 " Change the cursor shape on a mac running iterm2
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
@@ -135,4 +135,4 @@ let g:signify_sign_change = '~'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 source ~/.vim/scripts/Rename.vim " A script to rename files
-source ~/.vim/scripts/tetris.vim " A script to play tetris, leader te
+"source ~/.vim/scripts/tetris.vim " A script to play tetris, leader te
