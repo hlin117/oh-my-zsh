@@ -68,9 +68,13 @@ if [ "$USER" = "hlin117" ] ; then
     }
     # END DICT DEFINITION
 
+    # Changing the path for the nltk data
     if [ -d "/usr/local/nltk_data" ] ; then
         export NLTK_DATA="/usr/local/nltk_data":$NLTK_DATA
     fi
+
+    # Changing
+    #alias ocaml='rlwrap ocaml'
 fi
 
 ################################################################################

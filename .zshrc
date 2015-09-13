@@ -76,3 +76,6 @@ source `jump-bin --zsh-integration`
 export GIT_EDITOR=vim
 
 . $HOME/.shellrc.load
+
+# OPAM configuration
+. /Users/hlin117/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
