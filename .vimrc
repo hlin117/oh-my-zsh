@@ -54,6 +54,7 @@ map <C-e> <Nop>
 
 set colorcolumn=81
 
+set wildignore=*.swp,*.bak,*.pyc,*.class,*.jar,*.gif,*.png,*.jpg,*.log,*.aux
 
 " When editing a file, always jump to the last known cursor position.
 " Don't do it when the position is invalid or when inside an event handler
