@@ -75,7 +75,9 @@ fi
 # Extra stuff
 source $HOME/.aliases.sh
 source $HOME/.ssh_aliases.sh
-source `jump-bin --zsh-integration`
+if ! type "jump" > /dev/null; then
+    source `jump-bin --zsh-integration`
+fi
 export GIT_EDITOR=vim
 
 . $HOME/.shellrc.load
