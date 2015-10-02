@@ -52,7 +52,7 @@ map <S-k> <Nop>
 nnoremap q <Nop>						" Turns off recording mode
 map <C-e> <Nop>
 
-set colorcolumn=81
+set colorcolumn=80
 
 set wildignore=*.swp,*.bak,*.pyc,*.class,*.jar,*.gif,*.png,*.jpg,*.log,*.aux
 
