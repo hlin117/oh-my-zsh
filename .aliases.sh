@@ -17,6 +17,7 @@ function swap() {
 
 alias vi='vim'
 alias tree='tree -C'
+alias matlab='matlab -nojvm -nodisplay -nosplash'
 
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
