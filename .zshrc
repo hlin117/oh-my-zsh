@@ -45,7 +45,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting python)
+plugins=(git)
 
 # This below allows me to open only certain files in vim.
 zstyle ':completion:*:*:vim:*' file-patterns '^*.(aux|log|pdf|out):source-files' '*:all-files'
@@ -53,7 +53,7 @@ zstyle ':completion:*:*:vim:*' file-patterns '^*.(aux|log|pdf|out):source-files'
 # User configuration
 
 export PATH="/Users/hlin117/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/local/heroku/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin:/Users/hlin117/bin"
-if ! type "matlab" > /dev/null; then
+if type "matlab" > /dev/null; then
     export PATH="/Applications/MATLAB_R2015a.app/bin:$PATH"
 fi
 # export MANPATH="/usr/local/man:$MANPATH"
