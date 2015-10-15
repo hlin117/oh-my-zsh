@@ -15,7 +15,7 @@ function swap() {
 	mv $TMPFILE "$2"
 }
 
-alias vi='vim'
+#alias vi='vim'
 alias tree='tree -C'
 alias matlab='matlab -nojvm -nodisplay -nosplash'
 
