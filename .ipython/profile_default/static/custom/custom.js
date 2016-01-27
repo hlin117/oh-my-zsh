@@ -54,13 +54,14 @@ $([IPython.events]).on("app_initialized.NotebookApp", function () {
     IPython.keyboard_manager.command_shortcuts.add_shortcut('ctrl-j', 'ipython.move-selected-cell-down');
     IPython.keyboard_manager.command_shortcuts.add_shortcut('o', 'ipython.insert-cell-after');
     IPython.keyboard_manager.command_shortcuts.add_shortcut('shift-o', 'ipython.insert-cell-before');
-
-    // Merge cell below
-    IPython.keyboard_manager.command_shortcuts.add_shortcut('shift-j', 'ipython.merge-selected-cell-with-cell-after');
+    IPython.keyboard_manager.command_shortcuts.add_shortcut('shift-j', 'ipython.merge-selected-cell-with-cell-after');  // Merge cell below
     IPython.keyboard_manager.command_shortcuts.add_shortcut('u', 'ipython.undo-last-cell-deletion');
     IPython.keyboard_manager.command_shortcuts.add_shortcut('ctrl-c', 'ipython.interrupt-kernel');
     IPython.keyboard_manager.command_shortcuts.add_shortcut('p', 'ipython.paste-cell-after');
     IPython.keyboard_manager.command_shortcuts.add_shortcut('y', 'ipython.copy-selected-cell');
+    IPython.keyboard_manager.command_shortcuts.add_shortcut('shift-[', 'ipython.scroll-up');
+    IPython.keyboard_manager.command_shortcuts.add_shortcut('shift-]', 'ipython.scroll-down');
+    //IPython.keyboard_manager.command_shortcuts.add_shortcut('g,g', 'ipython.scroll-cell-top');
 
     // Removing unncessary shortcuts that I don't use (or have redefined),
     // and that I don't want to trigger
@@ -74,5 +75,9 @@ $([IPython.events]).on("app_initialized.NotebookApp", function () {
     IPython.keyboard_manager.command_shortcuts.remove_shortcut("s");  // Save (this is a duplicate default command)
     IPython.keyboard_manager.command_shortcuts.remove_shortcut("z");  // Undo last cell deletion
     IPython.keyboard_manager.command_shortcuts.remove_shortcut("c");  // Copy cell
+    IPython.keyboard_manager.command_shortcuts.remove_shortcut("shift-space");  // Scroll up
+    IPython.keyboard_manager.command_shortcuts.remove_shortcut("space");  // Scroll down
+    IPython.keyboard_manager.command_shortcuts.remove_shortcut("shift");  // Ignore
+    IPython.keyboard_manager.command_shortcuts.remove_shortcut("shift-k");  // Extend selection above
 
 });
