@@ -62,8 +62,8 @@ $([IPython.events]).on("app_initialized.NotebookApp", function () {
     IPython.keyboard_manager.command_shortcuts.add_shortcut('p', 'ipython.paste-cell-after');
     IPython.keyboard_manager.command_shortcuts.add_shortcut('y', 'ipython.copy-selected-cell');
 
-    // Removing unncessary shortcuts that I don't use, and that I don't want
-    // to trigger
+    // Removing unncessary shortcuts that I don't use (or have redefined),
+    // and that I don't want to trigger
     IPython.keyboard_manager.command_shortcuts.remove_shortcut("a");  // insert above
     IPython.keyboard_manager.command_shortcuts.remove_shortcut("b");  // insert below
     IPython.keyboard_manager.command_shortcuts.remove_shortcut("shift-m");  // merge selected cells
