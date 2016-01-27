@@ -26,7 +26,8 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 # EVERYTHING THAT BELONGS ON THE MAC
 ################################################################################
 if [ "$USER" = "hlin117" ] ; then
-
+    alias gcc='/usr/local/Cellar/gcc/5.2.0/bin/gcc-5'
+    alias g++='/usr/local/Cellar/gcc/5.2.0/bin/g++-5'
     alias jp='jump'
 
     # Using the gnu `ls` command instead of the bsd `ls` command
