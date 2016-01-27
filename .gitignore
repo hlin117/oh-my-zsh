@@ -2,3 +2,4 @@
 *.log
 *.aux
 .gitconfig
+.DS_Store
