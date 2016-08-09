@@ -43,7 +43,7 @@ ZSH_THEME_GIT_PROMPT_BRANCH="%{$fg_bold[magenta]%}"
 # Other stuff
 #ZSH_THEME_GIT_PROMPT_SEPARATOR="|"
 
-# The full list. 
+# The full list.
 # Source: https://github.com/olivierverdier/zsh-git-prompt/blob/master/zshrc.sh
 
 # Copy paste from: http://unicode-table.com/en/#basic-latin
