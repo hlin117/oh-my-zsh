@@ -74,22 +74,4 @@ if [ "$USER" = "hlin117" ] ; then
     if [ -d "/usr/local/nltk_data" ] ; then
         export NLTK_DATA="/usr/local/nltk_data":$NLTK_DATA
     fi
-
-    # Changing
-    #alias ocaml='rlwrap ocaml'
-fi
-
-################################################################################
-# EVERYTHING THAT BELONGS TO THE LINUX LABS
-################################################################################
-if [ "$USER" = "halin2" ] ; then
-    alias ls='ls --color=auto'
-    alias tmux="TERM=screen-256color-bce tmux"
-
-    if [ -d /class/cs225 ] ; then
-        export PATH="/class/cs225/llvm/bin":$PATH
-    fi
-#    else
-#        #echo "Warning: Clang is not loaded"
-#    fi
 fi
