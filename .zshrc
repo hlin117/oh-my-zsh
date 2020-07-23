@@ -52,7 +52,11 @@ zstyle ':completion:*:*:vim:*' file-patterns '^*.(aux|log|pdf|out):source-files'
 
 # User configuration
 
+#export GEM_PATH=/Users/myusername/Tools/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0
+#export GEM_SPEC_CACHE=/Users/myusername/Tools/.rbenv/versions/2.1.0/lib/ruby/gems/specs
+
 export PATH="/Users/hlin117/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/local/heroku/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin:/Users/hlin117/bin"
+export PATH="/Users/hlin117/miniconda2/bin:$PATH"
 export PATH=$PATH:/Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin/
 if type "matlab" > /dev/null; then
     export PATH="/Applications/MATLAB_R2015a.app/bin:$PATH"
